@@ -1,11 +1,12 @@
+/* -- GENERAL -- */
 * {
     margin: 0px;
     padding: 0px;
+    font-family: Georgia, serif;
 }
 
 h1 {
-    font-size: 3rem
-
+    font-size: 3rem;
 }
 
 h2{
@@ -20,6 +21,7 @@ body {
     justify-content: space-between;
 }
 
+/* -- HEADER & NAV -- */
 header {
     display: flex;
     align-items: center;
@@ -34,26 +36,85 @@ nav  ul{
     margin: 5vw;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap;   
 }
+
 
 nav li{
     list-style: none;
 }
 
+nav li a {
+    font-size: 2em;
+    text-decoration: none;
+    color : #008080;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease; 
+    display: inline-block;
+}
+
+nav li a:hover {
+    transform: scale(1.2);
+    color: #0bbbbb;
+}
+nav li a:active {
+    transform: scale(1);
+    color: #008080;
+}
+
+
+/* -- PROMOTION BANNER -- */
 #intro {
+    padding: 2vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     gap: 2vh;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    background-image: url('/assets/indoor-plants.jpg');
+    background-size: cover; 
+    background-position: 50% 60%;
+    position: relative;
 }
 
+#intro::before {
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    right: 0; 
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: 1; 
+    border-radius: 8px;
+}
+
+#intro h1{
+    position: relative;
+    z-index: 2;
+    color: white 
+}
 #intro p{
+    width: 100%;
     text-align: center;
     font-size: 1.5em;
+    position: relative;
+    z-index: 2;
+    color: white 
 }
 
+#intro:hover{
+    transform: scale(1.02);
+    cursor:default;
+}
+
+
+/* -- SERVICES -- */
 #services {
     padding: 3vh;
     display: grid;
@@ -71,15 +132,32 @@ nav li{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+
+
+/* -- FOOTER -- */
 footer {
+    margin: 50px 0px;
+    padding: 50px 0px 0px 0px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-}
-footer div{
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10vw;
+    border-top: 1px solid grey;
     
+}
+
+#footer-logo {
+    width: 5vw;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    align-self: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.copyright{
+    text-decoration: overline;
+    font-size: 18px;
+    border-top: 2px solid black;
 }
 
