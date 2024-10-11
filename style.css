@@ -11,12 +11,12 @@ h1 {
 
 h2{
     font-size: 1.5rem;
-    color: #000000;
+    color: #42474d;
 }
 
 body {
     margin: 2vh 4vw;
-    background-color: #ffefd5;
+    background-color: #fbeed9;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -57,6 +57,7 @@ nav li a {
     font-size: 2em;
     text-decoration: none;
     color : #42474d;
+    background-color: #ffefd5;
     padding: 12px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -145,7 +146,7 @@ section > a {
     height: 100%;
     padding: 15px;
     text-align: center;
-    background-color: #ffffff;
+    background-color: #ffefd5;
     border-radius: 20px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -162,7 +163,7 @@ section > a {
     height: 90%;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8);
 }
 
 .offering-picture:hover {
