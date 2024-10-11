@@ -10,7 +10,8 @@ h1 {
 }
 
 h2{
-    font-size: 2rem
+    font-size: 1.5rem;
+    color: #000000;
 }
 
 body {
@@ -29,16 +30,24 @@ header {
 }
 
 #top-logo{
-    width: 8vw;  
+    width: 8vw;
+    padding: 2vh 3vw; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    transition: transform 0.5s ease-in-out;
+}
+
+#top-logo:hover {
+    transform: rotate(360deg);
 }
 
 nav  ul{
     margin: 5vw;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;   
-}
+    justify-content: space-around;
+    flex-wrap: wrap;
 
+}
 
 nav li{
     list-style: none;
@@ -47,7 +56,7 @@ nav li{
 nav li a {
     font-size: 2em;
     text-decoration: none;
-    color : #008080;
+    color : #42474d;
     padding: 12px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -57,15 +66,20 @@ nav li a {
 
 nav li a:hover {
     transform: scale(1.2);
-    color: #0bbbbb;
-}
-nav li a:active {
-    transform: scale(1);
     color: #008080;
 }
 
+nav li a:active {
+    transform: scale(1);
+    color: #0bbbbb;
+    box-shadow: none;
+}
 
-/* -- PROMOTION BANNER -- */
+
+/* -- INTRO PROMOTION BANNER -- */
+section > a {
+    text-decoration: none;
+}
 #intro {
     padding: 2vh;
     display: flex;
@@ -75,8 +89,8 @@ nav li a:active {
     gap: 2vh;
     border: 1px solid #000000;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    background-image: url('/assets/indoor-plants.jpg');
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    background-image: url('/assets/indoor-promotion.jpg');
     background-size: cover; 
     background-position: 50% 60%;
     position: relative;
@@ -89,7 +103,7 @@ nav li a:active {
     left: 0;
     right: 0; 
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6); 
+    background-color: rgba(0, 0, 0, 0.7); 
     z-index: 1; 
     border-radius: 8px;
 }
@@ -110,28 +124,56 @@ nav li a:active {
 
 #intro:hover{
     transform: scale(1.02);
-    cursor:default;
+    cursor: pointer;
+}
+
+#intro:active{
+    transform: scale(1);
 }
 
 
 /* -- SERVICES -- */
 #services {
-    padding: 3vh;
+    margin: 8vh 4vw;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    gap: 20px;
 }
 
 #services article{
     width: 90%;
     height: 100%;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
     background-color: #ffffff;
-    border-radius: 5px;
+    border-radius: 20px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.offering-article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.offering-picture{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.offering-picture:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+.offering-picture:active {
+    transform: scale(1);
+    box-shadow: none;
+}
 
 
 /* -- FOOTER -- */
@@ -142,7 +184,7 @@ footer {
     flex-direction: row;
     justify-content: center;
     gap: 10vw;
-    border-top: 1px solid grey;
+    border-top: 1px solid #000000;
     
 }
 
